@@ -1,2 +1,2 @@
 # test-28
-Practice for JWD course - Spring Boot with AngularJS
+Practice for JWD course - Web App using Spring Boot with AngularJS
