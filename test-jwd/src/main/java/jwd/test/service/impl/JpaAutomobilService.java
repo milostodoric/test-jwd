@@ -32,8 +32,8 @@ public class JpaAutomobilService implements AutomobilService {
 	}
 	
 	@Override
-	public Automobil save(Automobil kompanija) {
-		return automobilRepository.save(kompanija);
+	public Automobil save(Automobil automobil) {
+		return automobilRepository.save(automobil);
 	}
 
 	@Override
@@ -50,6 +50,11 @@ public class JpaAutomobilService implements AutomobilService {
 	public Page<Automobil> pretraga(String model, Integer godiste, Double potrosnja, int page) {
 		
 		return automobilRepository.pretraga(model, godiste, potrosnja, new PageRequest(page, 10));
+	}
+
+	@Override
+	public Page<Automobil> findByKompanijaId(int pageNum, Long kompanijaId) { 
+		return automobilRepository.findByKompanijaId(kompanijaId, new PageRequest(pageNum, 10));
 	}
 
 

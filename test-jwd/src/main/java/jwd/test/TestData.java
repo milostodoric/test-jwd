@@ -37,7 +37,7 @@ public class TestData {
 		Automobil a1 = new Automobil();
 		a1.setModel("Nissan Prairie");
 		a1.setRegistracija("SU82404");
-		a1.setGodiste(1991);
+		a1.setGodiste(1995);
 		a1.setPotrosnja(10.3);
 		a1.setKompanija(k1);
 

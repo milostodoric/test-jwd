@@ -14,16 +14,16 @@ import jwd.test.model.Automobil;
 public interface AutomobilRepository extends JpaRepository<Automobil, Long>{
 
 	Page<Automobil> findByKompanijaId(Long kompanijaId, Pageable pageRequest);
-	
+
 	@Query("SELECT a FROM Automobil a WHERE "
-			+ "(:model IS NULL OR a.model like :model ) AND "
-			+ "(:godiste IS NULL OR a.godiste >= :godiste ) AND " 
+			+ "(:model IS NULL or a.model like :model ) AND "
+			+ "(:godiste IS NULL or a.godiste >= :godiste ) AND "
 			+ "(:potrosnja IS NULL OR a.potrosnja <= :potrosnja)"
 			)
 	Page<Automobil> pretraga(
-			@Param("model")String model, 
-			@Param("godiste") Integer godiste,
-			@Param("potrosnja") Double potrosnja, 
-			PageRequest pageRequest);
+			@Param("model") String model, 
+			@Param("godiste") Integer godiste, 
+			@Param("potrosnja") Double potrosnja,
+			Pageable pageRequest);
 
 }

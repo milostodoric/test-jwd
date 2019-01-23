@@ -22,5 +22,7 @@ public interface AutomobilService {
 			@Param("godiste") Integer godiste, 
 			@Param("potrosnja") Double potrosnja, 
 			int page);
+
+	Page<Automobil> findByKompanijaId(int pageNum, Long kompanijaId);
 	
 }

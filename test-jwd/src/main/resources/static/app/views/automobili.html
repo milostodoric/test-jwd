@@ -1,0 +1,50 @@
+<div ng-controller="automobilCtrl">
+
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>
+                    Model
+                </th>
+                <th>
+                    Registracija
+                </th>
+                <th>
+                    Godiste
+                </th>
+                <th>
+                    Potrosnja
+                </th>
+                <th>
+                    Kompanija
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+            <tr ng-repeat="a in automobili">
+                <td>
+                    {{a.model}}
+                </td>
+                <td>
+                    {{a.registracija}}
+                </td>
+                <td>
+                    {{a.godiste}}
+                </td>
+                <td>
+                    {{a.potrosnja}}
+                </td>
+                <td>
+                    {{a.kompanijaNaziv}}
+                </td>
+            </tr>
+
+
+        </tbody>
+    </table>
+
+
+</div>

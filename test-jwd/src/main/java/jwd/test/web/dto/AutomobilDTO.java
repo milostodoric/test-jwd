@@ -49,8 +49,9 @@ public class AutomobilDTO {
 	public Integer getGodiste() {
 		return godiste;
 	}
+	
 	public void setGodiste(Integer godiste) {
-		godiste = godiste;
+		this.godiste = godiste;
 	}
 	public Double getPotrosnja() {
 		return potrosnja;

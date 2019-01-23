@@ -4,10 +4,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 import jwd.test.model.Automobil;
 import jwd.test.web.dto.AutomobilDTO;
 
+@Component
 public class AutomobilToAutomobilDTO implements Converter<Automobil, AutomobilDTO> {
 
 	@Override

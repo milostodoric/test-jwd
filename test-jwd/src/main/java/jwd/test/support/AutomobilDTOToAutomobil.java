@@ -1,7 +1,5 @@
 package jwd.test.support;
 
-import java.util.ArrayList;
-import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.convert.converter.Converter;
@@ -42,5 +40,7 @@ public class AutomobilDTOToAutomobil implements Converter<AutomobilDTO, Automobi
 		
 		return automobil;
 	}
+	
+	
 	
 }

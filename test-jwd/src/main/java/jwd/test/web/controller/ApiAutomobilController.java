@@ -76,11 +76,26 @@ public class ApiAutomobilController {
 		return new ResponseEntity<>(toDto.convert(automobil), HttpStatus.CREATED);
 	}
 	
+	@RequestMapping(method = RequestMethod.PUT, value="/{id}")
+	public ResponseEntity<AutomobilDTO> edit (
+			@PathVariable Long id,
+			@Validated @RequestBody AutomobilDTO izmenjen){
+		
+		if(!id.equals(izmenjen.getId())) {
+			return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+		}
+		
+		Automobil automobil = toAutomobil.convert(izmenjen);
+		
+		automobilService.save(automobil);
+		
+		return new ResponseEntity<>(toDto.convert(automobil), HttpStatus.OK);
+	}
 	
-	
-	
-	
-	
-	
-
+	@RequestMapping(method = RequestMethod.DELETE, value="/{id}")
+	public ResponseEntity<AutomobilDTO> delete(@PathVariable Long id){
+		automobilService.delete(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+			
 }

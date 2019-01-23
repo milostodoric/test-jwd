@@ -4,11 +4,13 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.core.convert.converter.Converter;
+import org.springframework.stereotype.Component;
 
 import jwd.test.model.Kompanija;
 import jwd.test.web.dto.KompanijaDTO;
 
-public class KompanijaToKomapnijaDTO implements Converter<Kompanija, KompanijaDTO>{
+@Component
+public class KompanijaToKompanijaDTO implements Converter<Kompanija, KompanijaDTO>{
 	
 	@Override
 	public KompanijaDTO convert(Kompanija kompanija) {
