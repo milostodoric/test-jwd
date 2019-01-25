@@ -1,0 +1,1 @@
+testApp.controller("automobiliCtrl", automobiliCtrl);
