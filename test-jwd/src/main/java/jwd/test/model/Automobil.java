@@ -31,7 +31,7 @@ public class Automobil extends BaseEntity {
 	public Automobil() {
 		super();
 	}
-
+//ne valja
 	public Automobil(String model, String registracija, Integer godiste, Double potrosnja, Boolean iznajmljen) {
 		super();
 		this.model = model;
